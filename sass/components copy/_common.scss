@@ -1,0 +1,83 @@
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Logo
+.logo {
+  display: block;
+  margin-right: 93px;
+  @include font-logo();
+
+  .logo__part {
+    color: $accent-color;
+  }
+}
+// ===============================================================
+
+// Social Networks
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.social__list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  padding: 0;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $icon-bcd;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    fill: $white-color;
+    background-color: $accent-color;
+  }
+}
+// ================================================================
+// Button
+.button {
+  min-width: 200px;
+  min-height: 50px;
+  border: none;
+  border-radius: 4px;
+  @include font-button();
+  color: $white-color;
+  background-color: $accent-color;
+  outline: none;
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+}
+// ==================================================================

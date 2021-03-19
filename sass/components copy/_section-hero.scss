@@ -1,0 +1,22 @@
+// Section Hero
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient($dark-bcd-tpnt-color, $dark-bcd-tpnt-color),
+    url(../images/decorative/hero.jpg);
+  background-color: $dark-bcd-color;
+  text-align: center;
+}
+
+.hero__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  justify-content: center;
+  @include font-hero();
+  color: $white-color;
+}

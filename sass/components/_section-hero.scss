@@ -1,0 +1,50 @@
+// Section Hero
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  background-image: linear-gradient($dark-bcd-tpnt-color, $dark-bcd-tpnt-color),
+    url(../images/decorative/hero-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $dark-bcd-color;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        $dark-bcd-tpnt-color,
+        $dark-bcd-tpnt-color
+      ),
+      url(../images/decorative/hero-tablet.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(
+        $dark-bcd-tpnt-color,
+        $dark-bcd-tpnt-color
+      ),
+      url(../images/decorative/hero.jpg);
+  }
+}
+
+.hero__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  justify-content: center;
+  @include font-pm(26, 0.06, 900, 42);
+  text-transform: uppercase;
+  color: $white-color;
+
+  @include desktop {
+    @include font-pm(44, 0.06, 900, 60);
+  }
+}

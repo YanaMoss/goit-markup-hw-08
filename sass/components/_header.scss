@@ -1,0 +1,157 @@
+/* Header site */
+.header {
+  @include tablet {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.header__content {
+  min-height: 60px;
+  display: flex;
+
+  @include tablet {
+    min-height: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  color: $black-color;
+
+  @include tablet {
+    margin-right: 88px;
+  }
+}
+
+.logo-part {
+  color: $accent-color;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__list {
+  display: none;
+  @include tablet {
+    display: inline-flex;
+    margin: 0 auto;
+  }
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include font-pm(14, 0.02, 500, 16);
+  color: $title-color;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav__link--current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: currentColor;
+}
+
+.nav__link--current {
+  color: $accent-color;
+}
+
+.header__contacts {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+@include desktop {
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contacts__link {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  color: $primary-text-color;
+  background-position: center;
+  @include transition(color);
+  @include font-pm(12, 0.02, 500 14);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 1200px) {
+    @include font-pm(14, 0.02, 500, 16);
+  }
+}
+
+.contacts__envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts__phone {
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  fill: currentColor;
+}
+
+.header__button {
+  max-height: 40px;
+  margin: auto;
+  margin-right: 0;
+  padding: 0;
+  border: none;
+  background-color: $white-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  &--close-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
