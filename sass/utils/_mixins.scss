@@ -3,6 +3,7 @@
   transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 // Font
+
 @mixin font-pm(
   $font-size,
   $letter-spacing,
@@ -47,21 +48,6 @@
   letter-spacing: 0.01em;
 }
 
-@mixin font-team-name() {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
-  letter-spacing: 0.03em;
-}
-
-@mixin font-team-subtitle() {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.187;
-}
-
 @mixin font-filtres() {
   font-style: normal;
   font-weight: 500;
@@ -92,14 +78,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 1.875;
-  letter-spacing: 0.03em;
-}
-
-@mixin font-subscribe() {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25px;
   letter-spacing: 0.03em;
 }
 

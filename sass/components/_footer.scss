@@ -3,19 +3,28 @@
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
+  @include font-pm(14, 0.03, normal, 24);
   color: $white-color;
   background-color: $dark-bcd-color;
 }
 
 .footer__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: block;
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.footer__part {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .footer__logo {
@@ -25,6 +34,11 @@
 
 .footer__address {
   font-style: normal;
+  margin-bottom: 60px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .footer-contacts__list {
@@ -36,14 +50,18 @@
 }
 
 .footer__join {
-  margin-left: 70px;
   color: $white-color;
+
+  @include desktop {
+    margin-left: 70px;
+  }
 }
 
 .footer__title {
   display: block;
   margin-bottom: 20px;
   @include font-pm(14, 0.03, bold, 16);
+
   text-transform: uppercase;
 }
 
@@ -51,29 +69,55 @@
   fill: $white-color;
 }
 
+.subscribe {
+  margin-top: 60px;
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
 .subscribe__form {
-  display: flex;
+  display: block;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .subscribe__mail {
-  margin-right: 12px;
-  width: 358px;
-  min-height: 50px;
+  display: block;
+  max-width: 450px;
+  max-height: 50px;
+  margin: auto;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-left: 16px;
   padding-bottom: 15px;
   background-color: $dark-bcd-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  @include font-subscribe();
+  @include font-pm(16, 0.03, normal, 20);
   color: $white-color-text;
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe__button {
   display: flex;
-  margin: 0;
+  margin: auto;
   padding: 10px 28px 10px 28px;
   justify-content: space-between;
   align-items: center;

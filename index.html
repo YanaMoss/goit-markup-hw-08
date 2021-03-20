@@ -194,12 +194,15 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__part">
-              <img
-                src="./images/team/team1-270.jpg"
-                alt="фото Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <div class="team-thumb">
+                <img
+                  src="./images/team/team1.jpg"
+                  alt="фото Игорь Демьяненко"
+                  width="270"
+                  height="260"
+                  class="team__img"
+                />
+              </div>
               <div class="team__card">
                 <h3 class="team__title team__title--name">Игорь Демьяненко</h3>
                 <p class="team__subtitle" lang="en">Product Designer</p>
@@ -256,12 +259,15 @@
               </div>
             </li>
             <li class="team__part">
-              <img
-                src="./images/team/team2-270.jpg"
-                alt="фото Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <div class="team-thumb">
+                <img
+                  src="./images/team/team2.jpg"
+                  alt="фото Ольга Репина"
+                  class="team__img"
+                  width="270"
+                  height="260"
+                />
+              </div>
               <div class="team__card">
                 <h3 class="team__title team__title--name">Ольга Репина</h3>
                 <p class="team__subtitle" lang="en">Frontend Developer</p>
@@ -318,12 +324,15 @@
               </div>
             </li>
             <li class="team__part">
-              <img
-                src="./images/team/team3-270.jpg"
-                alt="фото Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <div class="team__thumb">
+                <img
+                  src="./images/team/team3.jpg"
+                  alt="фото Николай Тарасов"
+                  class="team__img"
+                  width="270"
+                  height="260"
+                />
+              </div>
               <div class="team__card">
                 <h3 class="team__title team__title--name">Николай Тараcов</h3>
                 <p class="team__subtitle" lang="en">Marketing</p>
@@ -380,12 +389,15 @@
               </div>
             </li>
             <li class="team__part">
-              <img
-                src="./images/team/team4-270.jpg"
-                alt="фото Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <div class="team__thumb">
+                <img
+                  src="./images/team/team4.jpg"
+                  alt="фото Михаил Ермаков"
+                  class="team__img"
+                  width="270"
+                  height="260"
+                />
+              </div>
               <div class="team__card">
                 <h3 class="team__title team__title--name">Михаил Ермаков</h3>
                 <p class="team__subtitle" lang="en">UI Designer</p>
@@ -449,7 +461,7 @@
         <div class="container">
           <h2 class="customers__title">Постоянные клиенты</h2>
           <ul class="customers__list">
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="45" height="50">
                   <use
@@ -458,7 +470,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="40" height="52">
                   <use
@@ -467,7 +479,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="41" height="43">
                   <use
@@ -476,7 +488,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="80" height="42">
                   <use
@@ -485,7 +497,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="59" height="47">
                   <use
@@ -494,7 +506,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="#">
                 <svg width="89" height="46">
                   <use
@@ -510,66 +522,72 @@
     <!--Footer-->
     <footer class="footer">
       <div class="container footer__content">
-        <div>
-          <a class="logo footer__logo" href="./index.html"
-            ><span class="logo-part">Web</span>Studio</a
-          >
-          <address class="footer__address">
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-contacts">
-              <li class="footer-contacts__list">
-                <a class="footer-contacts__link" href="mailto:info@example.com"
-                  >info@example.com</a
+        <div class="footer__part">
+          <div>
+            <a class="logo footer__logo" href="./index.html"
+              ><span class="logo-part">Web</span>Studio</a
+            >
+            <address class="footer__address">
+              <p>г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="footer-contacts">
+                <li class="footer-contacts__list">
+                  <a
+                    class="footer-contacts__link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-contacts__list">
+                  <a class="footer-contacts__link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Join -->
+          <div class="footer__join">
+            <h3 class="footer__title">Присоединяйтесь</h3>
+            <ul class="social">
+              <li class="social__list">
+                <a
+                  class="social__link"
+                  href="https://www.instagram.com/web-studio"
                 >
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use href="./images/decorative/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contacts__list">
-                <a class="footer-contacts__link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="social__list">
+                <a class="social__link" href="https://twitter.com/WebStudio">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__list">
+                <a class="social__link" href="https://www.facebook.com/">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__list">
+                <a class="social__link" href="https://www.linkedin.com/">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <!-- Join -->
-        <div class="foorer__join">
-          <h3 class="footer__title">Присоединяйтесь</h3>
-          <ul class="social">
-            <li class="social__list">
-              <a
-                class="social__link"
-                href="https://www.instagram.com/web-studio"
-              >
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use href="./images/decorative/sprite.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://twitter.com/WebStudio">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use href="./images/decorative/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://www.facebook.com/">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use
-                    href="./images/decorative/sprite.svg#icon-facebook"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://www.linkedin.com/">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use
-                    href="./images/decorative/sprite.svg#icon-linkedin"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <!-- Sign -->
         <div class="subscribe">

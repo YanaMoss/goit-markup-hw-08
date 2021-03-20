@@ -18,7 +18,7 @@
   <body>
     <!--Header-site-->
     <header class="header">
-      <div class="container header__contetnt">
+      <div class="container header__content">
         <nav class="header__nav nav">
           <a class="logo header__logo" href="./index.html"
             ><span class="logo-part">Web</span>Studio</a
@@ -55,6 +55,18 @@
             >
           </li>
         </ul>
+        <button type="button" class="header__button">
+          <svg width="40" height="40" aria-label="Переключатель меню">
+            <use
+              class="header__button--close-menu"
+              href="./images/decorative/sprite.svg#icon-close-menu"
+            ></use>
+            <use
+              class="header__button--open-menu"
+              href="./images/decorative/sprite.svg#icon-open-menu"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Portfolio -->
@@ -63,7 +75,7 @@
         <h1 class="visually-hidden">Наши работы</h1>
         <div class="container">
           <ul class="portfolio__filtres filtres">
-            <li class="filtres__list portfolio__filtres--list">
+            <li class="filtres__list filtres__list">
               <button class="filtres__list--button" type="button">Все</button>
             </li>
             <li class="filtres__list">
@@ -89,7 +101,7 @@
           </ul>
           <!-- works-list -->
           <ul class="portfolio__works">
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -113,7 +125,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -137,7 +149,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -161,7 +173,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -185,7 +197,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -209,7 +221,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -233,7 +245,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -257,7 +269,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -281,7 +293,7 @@
                 </div>
               </a>
             </li>
-            <li class="portfolio__works--list work">
+            <li class="portfolio__list work">
               <a class="work__link" href="">
                 <div class="work__thumb">
                   <img
@@ -313,66 +325,72 @@
     <!--Footer-->
     <footer class="footer">
       <div class="container footer__content">
-        <div>
-          <a class="logo footer__logo" href="./index.html"
-            ><span class="logo-part">Web</span>Studio</a
-          >
-          <address class="footer__address">
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="footer-contacts">
-              <li class="footer-contacts__list">
-                <a class="footer-contacts__link" href="mailto:info@example.com"
-                  >info@example.com</a
+        <div class="footer__part">
+          <div>
+            <a class="logo footer__logo" href="./index.html"
+              ><span class="logo-part">Web</span>Studio</a
+            >
+            <address class="footer__address">
+              <p>г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="footer-contacts">
+                <li class="footer-contacts__list">
+                  <a
+                    class="footer-contacts__link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-contacts__list">
+                  <a class="footer-contacts__link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Join -->
+          <div class="footer__join">
+            <h3 class="footer__title">Присоединяйтесь</h3>
+            <ul class="social">
+              <li class="social__list">
+                <a
+                  class="social__link"
+                  href="https://www.instagram.com/web-studio"
                 >
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use href="./images/decorative/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contacts__list">
-                <a class="footer-contacts__link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="social__list">
+                <a class="social__link" href="https://twitter.com/WebStudio">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__list">
+                <a class="social__link" href="https://www.facebook.com/">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__list">
+                <a class="social__link" href="https://www.linkedin.com/">
+                  <svg class="footer__social--icon" width="20" height="20">
+                    <use
+                      href="./images/decorative/sprite.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <!-- Join -->
-        <div class="foorer__join">
-          <h3 class="footer__title">Присоединяйтесь</h3>
-          <ul class="social">
-            <li class="social__list">
-              <a
-                class="social__link"
-                href="https://www.instagram.com/web-studio"
-              >
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use href="./images/decorative/sprite.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://twitter.com/WebStudio">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use href="./images/decorative/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://www.facebook.com/">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use
-                    href="./images/decorative/sprite.svg#icon-facebook"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__list">
-              <a class="social__link" href="https://www.linkedin.com/">
-                <svg class="footer__social--icon" width="20" height="20">
-                  <use
-                    href="./images/decorative/sprite.svg#icon-linkedin"
-                  ></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <!-- Sign -->
         <div class="subscribe">

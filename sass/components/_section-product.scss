@@ -12,6 +12,8 @@
   margin: 0;
   margin-bottom: 50px;
   @include font-pm(36, 0.03, bold, 42);
+  text-align: center;
+  color: $title-color;
 }
 
 .product__list {

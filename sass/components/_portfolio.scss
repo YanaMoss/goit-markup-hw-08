@@ -2,17 +2,28 @@
 
 .portfolio__filtres {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-left: -8px;
+
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.filtres__list:not(:last-child) {
-  margin-right: 8px;
+.filtres__list {
+  margin-left: 8px;
+  margin-bottom: 15px;
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filtres__list--button {
@@ -43,10 +54,19 @@
   margin-top: -30px;
 }
 
-.portfolio__works--list {
-  flex-basis: calc(100% / 3 - 30px);
+.portfolio__list {
+  flex-basis: calc(100% / 1 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+
+  @include tablet {
+    flex-basis: calc(100% / 2 - 30px);
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .work__link {
@@ -65,6 +85,9 @@
     transform: translateY(0);
     opacity: 1;
   }
+  @include tablet {
+    flex-grow: 1;
+  }
 }
 
 .work__thumb {
@@ -80,7 +103,7 @@
   height: 100%;
   background-color: $backdrop-accent;
   @include transition(transform);
-  transform: translateY(100%);
+  transform: translateY(101%);
   opacity: 1;
 }
 
