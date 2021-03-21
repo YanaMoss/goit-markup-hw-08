@@ -36,6 +36,86 @@
               <a class="nav__link" href="./contacts.html">Контакты</a>
             </li>
           </ul>
+          <!-- Mobile menu -->
+          <div class="mobile-menu js-menu-container">
+            <button class="mobile-menu__button--close js-close-menu">
+              <svg class="modal__icon-close" width="24" height="24">
+                <use
+                  href="./images/decorative/sprite.svg#icon-mb-menu-close"
+                ></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a
+                  class="mobile-menu__link mobile-menu__link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+            <div>
+              <ul>
+                <li class="mobile-menu__list-contacts">
+                  <a
+                    class="mobile-menu__contacts--tel"
+                    href="tel:+380991111111"
+                  >
+                    +38 099 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-menu__list-contacts">
+                  <a
+                    class="mobile-menu__contacts-email"
+                    href="mailto:info@example.com"
+                  >
+                    info@example.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile-menu__social">
+                <li class="mobile-menu__item-social">
+                  <a
+                    class="mobile-menu__link-social"
+                    href="https://www.instagram.com/web-studio"
+                    >instagram
+                  </a>
+                </li>
+                <li class="mobile-menu__item-social">
+                  <a
+                    class="mobile-menu__link-social"
+                    href="https://twitter.com/WebStudio"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li class="mobile-menu__item-social">
+                  <a
+                    class="mobile-menu__link-social"
+                    href="https://www.facebook.com/"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li class="mobile-menu__item-social">
+                  <a
+                    class="mobile-menu__link-social"
+                    href="https://www.linkedin.com/"
+                  >
+                    Linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <ul class="header__contacts contacts">
           <li class="contacts__item">
@@ -55,12 +135,8 @@
             >
           </li>
         </ul>
-        <button type="button" class="header__button">
+        <button type="button" class="header__button js-open-menu">
           <svg width="40" height="40" aria-label="Переключатель меню">
-            <use
-              class="header__button--close-menu"
-              href="./images/decorative/sprite.svg#icon-close-menu"
-            ></use>
             <use
               class="header__button--open-menu"
               href="./images/decorative/sprite.svg#icon-open-menu"
@@ -680,6 +756,7 @@
         </div>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

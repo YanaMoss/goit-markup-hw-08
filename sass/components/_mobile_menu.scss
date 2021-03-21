@@ -1,0 +1,99 @@
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100vw) scale(1);
+  padding: 40px 48px 40px 48px;
+  border: 1px solid $header-line;
+  background-color: $white-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  @include transition(transform);
+
+  &__button--close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+    padding: 11px;
+    min-width: 40px;
+    min-height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: $white-color;
+  }
+
+  &__list {
+    @include font-pm(40, 0.02, 500, 47);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    color: $title-color;
+    @include transition(color);
+    padding-bottom: 8px;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__link--current {
+    color: $accent-color;
+  }
+
+  &__list-contacts:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__contacts--tel {
+    @include font-pm(34, 0.02, 500, 40);
+    color: $accent-color;
+  }
+
+  &__contacts-email {
+    @include font-pm(24, 0.02, 500, 28);
+    color: $primary-text-color;
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+  }
+
+  &__item-social {
+    @include font-pm(18, 0.02, 500, 22);
+    &:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid $border-mobile-color;
+    }
+
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+  &__link-social {
+    color: $accent-color;
+  }
+
+  &.is-open {
+    transform: translateX(0) scale(1);
+  }
+}

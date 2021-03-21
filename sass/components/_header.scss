@@ -1,7 +1,7 @@
 /* Header site */
 .header {
   @include tablet {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid $header-line;
   }
 }
 
@@ -33,6 +33,9 @@
   align-items: center;
 }
 
+.nav {
+  position: relative;
+}
 .nav__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -91,6 +94,13 @@
   }
 }
 
+.mobile-menu {
+  position: absolut;
+  top: 100%;
+  right: 0;
+  display: block;
+}
+
 @include desktop {
   .contacts__item:not(:last-child) {
     margin-right: 50px;
@@ -136,8 +146,11 @@
 
 .header__button {
   max-height: 40px;
-  margin: auto;
-  margin-right: 0;
+  margin: 10px, 15px, 10px, auto;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: auto;
   padding: 0;
   border: none;
   background-color: $white-color;

@@ -48,39 +48,6 @@
   letter-spacing: 0.01em;
 }
 
-@mixin font-filtres() {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-@mixin font-work-title() {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-@mixin font-work-text() {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-}
-
-@mixin font-work-subtitle() {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.03em;
-}
-
 @mixin mobile {
   @media only screen and (min-width: $mobile * 1px) {
     @content;
