@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: space-between;
   @include transition(transform);
+  z-index: 1;
 
   &__button--close {
     position: absolute;
