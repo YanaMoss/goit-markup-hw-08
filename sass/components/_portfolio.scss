@@ -1,21 +1,5 @@
 /* Portfolio */
 
-.portfolio__filtres {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -8px;
-
-  @include tablet {
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-}
-
-.filtres__list {
-  margin-left: 8px;
-  margin-bottom: 15px;
-}
-
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -24,113 +8,136 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
-}
 
-.filtres__list--button {
-  padding: 6px 22px;
-  border: none;
-  border-radius: 4px;
-  @include font-pm(16, 0.03, 500, 26);
-  color: $title-color;
-  background-color: $secondary-bcd-color;
-  @include transition(color);
-  @include transition(box-shadow);
+  &__filtres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white-color;
-    background-color: $accent-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    outline: none;
+    @include tablet {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__works {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  &__list {
+    flex-basis: calc(100% / 1);
+    margin-left: 30px;
+    margin-top: 30px;
+
+    @include tablet {
+      flex-basis: calc(100% / 2 - 30px);
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-basis: calc(100% / 3 - 30px);
+    }
   }
 }
 
-.portfolio__works {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+.filtres__list {
+  margin-left: 8px;
+  margin-bottom: 15px;
+
+  &--button {
+    padding: 6px 22px;
+    border: none;
+    border-radius: 4px;
+    @include font-pm(16, 0.03, 500, 26);
+    color: $title-color;
+    background-color: $secondary-bcd-color;
+    @include transition(color);
+    @include transition(box-shadow);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white-color;
+      background-color: $accent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      outline: none;
+    }
+  }
 }
 
-.portfolio__list {
-  flex-basis: calc(100% / 1 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-
-  @include tablet {
-    flex-basis: calc(100% / 2 - 30px);
+.work {
+  &__link {
     display: flex;
     flex-direction: column;
-  }
-  @include desktop {
-    flex-basis: calc(100% / 3 - 30px);
-  }
-}
+    flex-grow: 1;
+    @include transition(box-shadow);
 
-.work__link {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  @include transition(box-shadow);
+    &:hover,
+    &:focus {
+      display: block;
+      outline: none;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 
-  &:hover,
-  &:focus {
-    display: block;
-    outline: none;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover .work__backdrop,
+    &:focus .work__backdrop {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  &:hover .work__backdrop,
-  &:focus .work__backdrop {
-    transform: translateY(0);
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    background-color: $backdrop-accent;
+    @include transition(transform);
+    transform: translateY(101%);
     opacity: 1;
   }
-}
 
-.work__thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.work__backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $backdrop-accent;
-  @include transition(transform);
-  transform: translateY(101%);
-  opacity: 1;
-}
-
-.work__text {
-  padding: 63px 24px 63px 24px;
-  @include font-pm(18, 0.03, normal, 28);
-  color: $white-color;
-}
-
-.work__title {
-  @include font-pm(18, 0.06, bold, 36);
-  color: $title-color;
-}
-
-.work__card {
-  padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  overflow: hidden;
-  @include tablet {
-    flex-grow: 1;
+  &__text {
+    padding: 63px 24px 63px 24px;
+    @include font-pm(18, 0.03, normal, 28);
+    color: $white-color;
   }
-}
 
-.work__subtitle {
-  margin-top: 4px;
-  @include font-pm(16, 0.03, normal, 30);
-  color: $primary-text-color;
+  &__title {
+    @include font-pm(18, 0.06, bold, 36);
+    color: $title-color;
+  }
+
+  &__card {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+    @include tablet {
+      flex-grow: 1;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 4px;
+    @include font-pm(16, 0.03, normal, 30);
+    color: $primary-text-color;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

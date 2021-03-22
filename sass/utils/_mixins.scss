@@ -31,25 +31,14 @@
   letter-spacing: 0.03em;
 }
 
-@mixin font-title-modal() {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-
-@mixin font-form-modal() {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
 @mixin mobile {
   @media only screen and (min-width: $mobile * 1px) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media only screen and (min-width: $mobileMax * 1px) {
     @content;
   }
 }
