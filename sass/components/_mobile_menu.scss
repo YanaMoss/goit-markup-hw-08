@@ -27,7 +27,6 @@
     padding: 11px;
     min-width: 40px;
     min-height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border: none;
     background-color: $white-color;
   }
@@ -81,6 +80,7 @@
 
   &__item-social {
     @include font-pm(18, 0.02, 500, 22);
+
     &:not(:last-child) {
       padding-right: 10px;
       border-right: 1px solid $border-mobile-color;
@@ -90,6 +90,7 @@
       padding-left: 10px;
     }
   }
+
   &__link-social {
     color: $accent-color;
   }
